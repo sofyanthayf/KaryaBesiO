@@ -1,4 +1,4 @@
-package karyabesi_fragment;
+package org.k_innovation.karyabesi_o.fragment;
 
 
 import android.os.Bundle;
@@ -9,13 +9,14 @@ import android.view.ViewGroup;
 
 import org.k_innovation.karyabesi_o.R;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ItemListFragment extends Fragment {
+public class ItemDetailFragment extends Fragment {
 
 
-    public ItemListFragment() {
+    public ItemDetailFragment() {
         // Required empty public constructor
     }
 
@@ -24,8 +25,7 @@ public class ItemListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_item_list, container, false);
+        return inflater.inflate(R.layout.fragment_item_detail, container, false);
     }
 
 }

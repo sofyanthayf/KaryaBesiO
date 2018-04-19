@@ -1,4 +1,4 @@
-package karyabesi_object;
+package org.k_innovation.karyabesi_o.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;

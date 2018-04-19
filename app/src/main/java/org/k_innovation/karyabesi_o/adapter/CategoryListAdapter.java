@@ -1,4 +1,4 @@
-package karyabesi_fragment;
+package org.k_innovation.karyabesi_o.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +11,7 @@ import org.k_innovation.karyabesi_o.R;
 
 import java.util.List;
 
-import karyabesi_object.Category;
+import org.k_innovation.karyabesi_o.entity.Category;
 
 /**
  * Created by Sofyan Thayf on 01/09/18.
@@ -75,7 +75,7 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
 
         public void setData(Category current, int position) {
 
-            tvCategoryID.setText(current.getNama_id());
+            tvCategoryID.setText(current.getNama_id() + " - " + current.getId_kategori() );
             tvCategoryEN.setText(current.getNama_en());
 
         }

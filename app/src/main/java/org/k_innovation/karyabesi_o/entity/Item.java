@@ -1,32 +1,44 @@
-package karyabesi_object;
+package org.k_innovation.karyabesi_o.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
+ * Class data untuk Item Barang
  * Created by Sofyan Thayf on 01/12/18.
  */
 
 public class Item implements Parcelable {
-    String id_item;
-    String nama_item;
+    /* kategori barang */
+    Category kategori;
+
+    /* kode barang */
+    String id_barang;
+
+    /* nama barang */
+    String nama_barang;
+
+    /* stock barang di gudang (warehouse) */
     Integer stock_wh;
+
+    /* stock barang di toko */
     Integer stock_sh;
 
-    public String getId_item() {
-        return id_item;
+
+    public String getId_barang() {
+        return id_barang;
     }
 
-    public void setId_item(String id_item) {
-        this.id_item = id_item;
+    public void setId_barang(String id_barang) {
+        this.id_barang = id_barang;
     }
 
-    public String getNama_item() {
-        return nama_item;
+    public String getNama_barang() {
+        return nama_barang;
     }
 
-    public void setNama_item(String nama_item) {
-        this.nama_item = nama_item;
+    public void setNama_barang(String nama_barang) {
+        this.nama_barang = nama_barang;
     }
 
     public Integer getStock_wh() {
@@ -52,8 +64,8 @@ public class Item implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.id_item);
-        dest.writeString(this.nama_item);
+        dest.writeString(this.id_barang);
+        dest.writeString(this.nama_barang);
         dest.writeValue(this.stock_wh);
         dest.writeValue(this.stock_sh);
     }
@@ -62,8 +74,8 @@ public class Item implements Parcelable {
     }
 
     protected Item(Parcel in) {
-        this.id_item = in.readString();
-        this.nama_item = in.readString();
+        this.id_barang = in.readString();
+        this.nama_barang = in.readString();
         this.stock_wh = (Integer) in.readValue(Integer.class.getClassLoader());
         this.stock_sh = (Integer) in.readValue(Integer.class.getClassLoader());
     }

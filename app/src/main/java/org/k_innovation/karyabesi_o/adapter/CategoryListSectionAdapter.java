@@ -1,9 +1,7 @@
-package karyabesi_fragment;
+package org.k_innovation.karyabesi_o.adapter;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.k_innovation.karyabesi_o.R;
@@ -11,9 +9,8 @@ import org.k_innovation.karyabesi_o.R;
 import java.util.List;
 
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
-import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
-import karyabesi_object.Category;
+import org.k_innovation.karyabesi_o.entity.Category;
 
 /**
  * https://stackoverflow.com/questions/39228288/how-to-show-hierarchical-data-structure-with-recycleview

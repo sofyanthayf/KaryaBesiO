@@ -1,11 +1,13 @@
-package org.k_innovation.karyabesi_o;
+package org.k_innovation.karyabesi_o.activity;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import karyabesi_fragment.CategoryFragment;
+import org.k_innovation.karyabesi_o.R;
+
+import org.k_innovation.karyabesi_o.fragment.CategoryFragment;
 
 public class MainActivity extends AppCompatActivity {
 

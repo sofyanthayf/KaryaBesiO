@@ -1,4 +1,4 @@
-package karyabesi_fragment;
+package org.k_innovation.karyabesi_o.fragment;
 
 
 import android.os.Bundle;
@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import org.k_innovation.karyabesi_o.R;
+import org.k_innovation.karyabesi_o.adapter.CategoryListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ import java.util.List;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
-import karyabesi_object.Category;
+import org.k_innovation.karyabesi_o.entity.Category;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -130,7 +131,11 @@ public class CategoryFragment extends Fragment {
     }
 
 
-
+    /**
+     * https://stackoverflow.com/questions/39228288/how-to-show-hierarchical-data-structure-with-recycleview
+     * https://github.com/luizgrp/SectionedRecyclerViewAdapter
+     * https://github.com/luizgrp/SectionedRecyclerViewAdapter/blob/master/app/src/main/java/io/github/luizgrp/sectionedrecyclerviewadapter/demo/Example4Fragment.java
+     */
     private class CategoryListSectionAdapter extends StatelessSection {
 
         Category main_cat;
@@ -161,8 +166,8 @@ public class CategoryFragment extends Fragment {
             final ItemViewHolder itemHolder = (ItemViewHolder) holder;
 
             Category category = list.get(position);
-
-            itemHolder.tvCategoryID.setText(category.getNama_id());
+//            current.getNama_id() + " - " + current.getId_kategori()
+            itemHolder.tvCategoryID.setText(category.getNama_id() + " - " + category.getId_kategori());
             itemHolder.tvCategoryEN.setText(category.getNama_en());
 
             itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
